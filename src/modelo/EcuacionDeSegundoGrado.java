@@ -19,23 +19,40 @@ public class EcuacionDeSegundoGrado {
         this.b = b; 
         this.c = c; 
     }
-    
+    public void setCoeficienteA(double a)
+        {
+            this.a=a;
+          
+        }
+    public void setCoeficienteB(double b)
+        {
+           this.b=b;
+            
+        }
+    public void setCoeficienteC(double c)
+        {
+            this.c=c;
+             
+        }
     public double getCoeficienteA()
         {
-            return this.a;
+            
+            return a;
         }
     public double getCoeficienteB()
         {
-            return this.b;
+            
+            return b;
         }
-    public double getCoeficientec()
+    public double getCoeficienteC()
         {
-             return this.c;
+            
+             return c;
         }
     public int getDiscriminante()
         {
-            int discriminante=((int) Math.pow(this.b, 2)) - 4 * ((int)this.a)* ((int) c);
-           //Math.pow(b, 2)- 4*a*c
+            int discriminante=((int) Math.pow(this.b, 2)) - 4 * ((int)this.a)* ((int) this.c);
+           
             return discriminante;
            
         }
@@ -44,7 +61,7 @@ public class EcuacionDeSegundoGrado {
         {
             int numeroDeSolucionesReales=0;
             
-            if(this.a == 0 )
+           if(this.a == 0 )
         {
            System.out.println("La ecuacion no es de segundo GRADO"); 
         }
@@ -78,6 +95,10 @@ public class EcuacionDeSegundoGrado {
                {
                    Raiz1 = -(this.b)/ (2* this.a);
                }
+             else
+             {
+                  Raiz1 = (-(this.b) + ((double) Math.sqrt(this.getDiscriminante())) )/ (2*this.a);
+             }
                
             return Raiz1;
             
@@ -89,14 +110,13 @@ public class EcuacionDeSegundoGrado {
              if( this.getDiscriminante() > 0)
                {
   
-                   Raiz2 = -(this.b) + ((double) Math.sqrt(this.getDiscriminante())) / (2*this.a);
-                   Raiz2 = (-(b) - Math.sqrt(disc))/ (2*a); 
+                   Raiz2 = (-(this.b) - ((double) Math.sqrt(this.getDiscriminante())) )/ (2*this.a);
                   
-                  /*  x1 = (-(b) + Math.sqrt(disc))/ (2*a);
-                   x2 = (-(b) - Math.sqrt(disc))/ (2*a); */
                }
             return Raiz2;
         }
+
+  
     
     
 }
