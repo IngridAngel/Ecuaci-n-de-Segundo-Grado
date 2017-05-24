@@ -10,7 +10,17 @@ import modelo.EcuacionDeSegundoGrado;
 
 /**
  *
- * @author jany-yin
+ * 
+ * Número y nombre del laboratorio.
+    Laboratorio: 2 –Identificación de objetos, declaración de clases y creación y uso de objetos. Ecuación de
+segundo grado.
+   *Datos del Alumno 
+   * Nombre: Ingrid Ocaña Angel 
+   * matrícula: 16470300
+   * grupo: MS-2
+  * Fecha de entrega:
+  * 24/05/2017
+
  */
 public class Main {
 
@@ -38,8 +48,9 @@ public class Main {
                 Ecuacion.setCoeficienteC(c);
       
         System.out.println("Discriminante: " + Ecuacion.getDiscriminante());
-       System.out.println("Numero de soluciones Reales: " + Ecuacion.getNumeroDeSolucionesReales());
-        
+          System.out.print("/////////////////////////////// ");
+       System.out.println("Numero de soluciones reales: " + Ecuacion.getNumeroDeSolucionesReales());
+        System.out.print("/////////////////////////////// ");
         if(a == 0 )
         {
            //  System.out.println("La ecuacion no es de segundo GRADO"); 
@@ -55,6 +66,7 @@ public class Main {
                {
                   System.out.println("Raiz 1 : " + Ecuacion.getRaiz1()); 
                   System.out.println("Raiz 2 : " + Ecuacion.getRaiz2()); 
+                  System.out.print("/////////////////////////////// ");
                }  
             }
         }
